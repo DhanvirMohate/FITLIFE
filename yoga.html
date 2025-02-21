@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Plan Questionnaire</title>
+    <link rel="stylesheet" href="./yoga.css">
+    <script defer src="./yoga (1).js"></script>
+    <button onclick="location.href='yoga.html'">Next ➡</button>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🧘 Personalized Yoga Plan</h1>
+        <p>Answer a few questions to receive a customized yoga plan.</p>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Step 1: Ask for Age -->
+        <div class="question" id="step-age">
+            <h2>How old are you?</h2>
+            <input type="number" id="age" min="1" max="100" placeholder="Enter your age">
+            <button onclick="nextStep('step-age', 'step-goals')">Next ➡</button>
+        </div>
+
+        <!-- Step 2: Yoga Goals -->
+        <div class="question hidden" id="step-goals">
+            <h2>What is your main goal with yoga?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="goal" value="Flexibility"> 🤸 Improve Flexibility</label>
+                <label><input type="radio" name="goal" value="Strength"> 💪 Build Strength</label>
+                <label><input type="radio" name="goal" value="Relaxation"> 🌿 Stress Relief & Relaxation</label>
+                <label><input type="radio" name="goal" value="Weight Loss"> 🔥 Weight Loss</label>
+            </div>
+            <button onclick="nextStep('step-goals', 'step-experience')">Next ➡</button>
+        </div>
+
+        <!-- Step 3: Yoga Experience -->
+        <div class="question hidden" id="step-experience">
+            <h2>What is your yoga experience level?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="experience" value="Beginner"> 🌱 Beginner</label>
+                <label><input type="radio" name="experience" value="Intermediate"> ✨ Intermediate</label>
+                <label><input type="radio" name="experience" value="Advanced"> 🧘‍♂ Advanced</label>
+            </div>
+            <button onclick="nextStep('step-experience', 'step-type')">Next ➡</button>
+        </div>
+
+        <!-- Step 4: Preferred Yoga Style -->
+        <div class="question hidden" id="step-type">
+            <h2>Which yoga style do you prefer?</h2>
+            <div class="option-box">
+                <label><input type="checkbox" value="Hatha"> 🕉 Hatha (Slow & Gentle)</label>
+                <label><input type="checkbox" value="Vinyasa"> 🌊 Vinyasa (Flow & Movement)</label>
+                <label><input type="checkbox" value="Power"> 💪 Power Yoga (Strength-Based)</label>
+                <label><input type="checkbox" value="Restorative"> 😌 Restorative Yoga (Deep Relaxation)</label>
+                <label><input type="checkbox" value="Not Sure"> ❓ Not Sure</label>
+            </div>
+            <button onclick="nextStep('step-type', 'step-time')">Next ➡</button>
+        </div>
+
+        <!-- Step 5: Preferred Session Duration -->
+        <div class="question hidden" id="step-time">
+            <h2>How long do you want each yoga session to be?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="time" value="10-15 mins"> ⏳ 10-15 mins</label>
+                <label><input type="radio" name="time" value="20-30 mins"> ⏱ 20-30 mins</label>
+                <label><input type="radio" name="time" value="45-60 mins"> 🕰 45-60 mins</label>
+                <label><input type="radio" name="time" value="60+ mins"> 🧘 More than 60 mins</label>
+            </div>
+            <button onclick="nextStep('step-time', 'step-summary')">Next ➡</button>
+        </div>
+
+        <!-- Step 6: Summary & Submit -->
+        <div class="question hidden" id="step-summary">
+            <h2>🎉 You're all set!</h2>
+            <p>We'll generate a yoga plan based on your answers.</p>
+            <button onclick="submitForm()">Submit ✅</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

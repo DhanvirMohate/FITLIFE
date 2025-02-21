@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Plan Questionnaire</title>
+    <link rel="stylesheet" href="./meditation.css">
+    <script defer src="./meditation (1).js"></script>
+    <button onclick="location.href='meditation.html'">Next ➡</button>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🧘 Personalized Meditation Plan</h1>
+        <p>Answer a few questions to receive a customized meditation plan.</p>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Step 1: Ask for Age -->
+        <div class="question" id="step-age">
+            <h2>How old are you?</h2>
+            <input type="number" id="age" min="1" max="100" placeholder="Enter your age">
+            
+        </div>
+
+        <!-- Step 2: Meditation Goals -->
+        <div class="question hidden" id="step-goals">
+            <h2>Why do you want to meditate?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="goal" value="Reduce Stress"> 🌿 Reduce Stress</label>
+                <label><input type="radio" name="goal" value="Improve Focus"> 🎯 Improve Focus</label>
+                <label><input type="radio" name="goal" value="Better Sleep"> 😴 Better Sleep</label>
+                <label><input type="radio" name="goal" value="Self Awareness"> 🌱 Self-Awareness</label>
+            </div>
+            <button onclick="nextStep('step-goals', 'step-experience')">Next ➡</button>
+        </div>
+
+        <!-- Step 3: Meditation Experience -->
+        <div class="question hidden" id="step-experience">
+            <h2>What is your meditation experience level?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="experience" value="Beginner"> 🌱 Beginner</label>
+                <label><input type="radio" name="experience" value="Intermediate"> ✨ Intermediate</label>
+                <label><input type="radio" name="experience" value="Advanced"> 🧘‍♂ Advanced</label>
+            </div>
+            <button onclick="nextStep('step-experience', 'step-type')">Next ➡</button>
+        </div>
+
+        <!-- Step 4: Preferred Meditation Type -->
+        <div class="question hidden" id="step-type">
+            <h2>What type of meditation do you prefer?</h2>
+            <div class="option-box">
+                <label><input type="checkbox" value="Mindfulness"> 🌿 Mindfulness</label>
+                <label><input type="checkbox" value="Guided"> 🎤 Guided Meditation</label>
+                <label><input type="checkbox" value="Breathing"> 🌬 Breathing Meditation</label>
+                <label><input type="checkbox" value="Mantra"> 🕉 Mantra Meditation</label>
+                <label><input type="checkbox" value="None"> ❓ Not Sure</label>
+            </div>
+            <button onclick="nextStep('step-type', 'step-time')">Next ➡</button>
+        </div>
+
+        <!-- Step 5: Preferred Duration -->
+        <div class="question hidden" id="step-time">
+            <h2>How much time can you dedicate daily?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="time" value="5-10 mins"> ⏳ 5-10 mins</label>
+                <label><input type="radio" name="time" value="10-20 mins"> ⏱ 10-20 mins</label>
+                <label><input type="radio" name="time" value="20-30 mins"> 🕰 20-30 mins</label>
+                <label><input type="radio" name="time" value="30+ mins"> 🧘 More than 30 mins</label>
+            </div>
+            <button onclick="nextStep('step-time', 'step-summary')">Next ➡</button>
+        </div>
+
+        <!-- Step 6: Summary & Submit -->
+        <div class="question hidden" id="step-summary">
+            <h2>🎉 You're all set!</h2>
+            <p>We'll generate a meditation plan based on your answers.</p>
+            <button onclick="submitForm()">Submit ✅</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Minimized Navbar with Background Image */
+.navbar {
+    background: url('fitness-bar.jpg') no-repeat center;
+    background-size: cover;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero .highlight {
+    color: #ffcc00;
+    font-style: italic;
+}
+
+.hero .quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #ddd;
+}
+
+.hero img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Importance Section */
+.importance {
+    padding: 20px;
+}
+
+.importance-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.importance-box {
+    margin: 10px;
+    padding: 15px;
+    background: #87405e47;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.importance-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Features */
+.features {
+    padding: 20px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background: #bb5c873f;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+}
+
+.feature-item i {
+    font-size: 40px;
+    color: #ffcc00;
+}
+
+/* Call to Action */
+.cta button {
+    padding: 15px;
+    background: linear-gradient(to right, #ff7300, #ffcc00);
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta button:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: black;
+    padding: 20px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 10px;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #ffcc00;
+}

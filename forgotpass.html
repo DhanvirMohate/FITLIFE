@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="./forpas.css">
+</head>
+<body>
+    <div class="forgot-container">
+        <h2>Forgot Password?</h2>
+        <p>Enter your email below to receive a password reset link.</p>
+        <form id="resetForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit">Send Reset Link</button>
+        </form>
+        <p id="resetMessage"></p>
+        <a href="./login.html" class="back-to-login">Back to Login</a>
+    </div>
+    <script>
+        document.getElementById("resetForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let email = document.getElementById("email").value;
+            let resetMessage = document.getElementById("resetMessage");
+
+            // Simulate password reset process
+            resetMessage.textContent = "A reset link has been sent to " + email;
+            resetMessage.style.color = "green";
+        });
+    </script>
+</body>
+</html>

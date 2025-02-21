@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan Questionnaire</title>
+    <link rel="stylesheet" href="./dietplan.css">
+    <script defer src="./dietplan (1).js"></script>
+    <button onclick="location.href='dietplan.html'">Next ➡</button>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🥗 Personalized Diet Plan</h1>
+        <p>Answer a few quick questions to get the perfect diet plan for you! 🚀</p>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Step 1: Ask for Age -->
+        <div class="question" id="step-age">
+            <h2>How old are you?</h2>
+            <input type="number" id="age" min="1" max="100" placeholder="Enter your age">
+            <button onclick="nextStep('step-age', 'step-goals')">Next ➡</button>
+        </div>
+
+        <!-- Step 2: Health Goals -->
+        <div class="question hidden" id="step-goals">
+            <h2>What is your primary health goal?</h2>
+            <div class="option-box">
+                <label><input type="radio" name="goal" value="Weight Loss"> 🏃‍♂ Weight Loss</label>
+                <label><input type="radio" name="goal" value="Muscle Gain"> 💪 Muscle Gain</label>
+                <label><input type="radio" name="goal" value="Healthy Eating"> 🥗 Healthy Eating</label>
+            </div>
+            <button onclick="nextStep('step-goals', 'step-diet-type')">Next ➡</button>
+        </div>
+
+        <!-- Step 3: Dietary Preferences -->
+        <div class="question hidden" id="step-diet-type">
+            <h2>Do you follow any specific diet?</h2>
+            <div class="option-box">
+                <label><input type="checkbox" value="Vegetarian"> 🌿 Vegetarian</label>
+                <label><input type="checkbox" value="Vegan"> 🌱 Vegan</label>
+                <label><input type="checkbox" value="Keto"> 🥓 Keto</label>
+                <label><input type="checkbox" value="None"> 🚫 No Specific Diet</label>
+            </div>
+            <button onclick="nextStep('step-diet-type', 'step-allergies')">Next ➡</button>
+        </div>
+
+        <!-- Step 4: Allergies & Medical Conditions -->
+        <div class="question hidden" id="step-allergies">
+            <h2>Do you have any allergies or medical conditions?</h2>
+            <div class="option-box">
+                <label><input type="checkbox" value="Lactose Intolerance"> 🥛 Lactose Intolerance</label>
+                <label><input type="checkbox" value="Gluten Allergy"> 🌾 Gluten Allergy</label>
+                <label><input type="checkbox" value="Diabetes"> 🩸 Diabetes</label>
+                <label><input type="checkbox" value="None"> ✅ None</label>
+            </div>
+            <button onclick="nextStep('step-allergies', 'step-activity')">Next ➡</button>
+        </div>
+
+        <!-- Step 5: Activity Level -->
+        <div class="question hidden" id="step-activity">
+            <h2>How active are you?</h2>
+            <select id="activity">
+                <option value="Sedentary">💺 Sedentary (Little to no exercise)</option>
+                <option value="Lightly Active">🚶 Lightly Active (1-3 days a week)</option>
+                <option value="Moderately Active">🏋 Moderately Active (4-5 days a week)</option>
+                <option value="Very Active">🔥 Very Active (6-7 days a week)</option>
+            </select>
+            <button onclick="nextStep('step-activity', 'step-summary')">Next ➡</button>
+        </div>
+
+        <!-- Step 6: Summary & Submit -->
+        <div class="question hidden" id="step-summary">
+            <h2>🎉 All Done!</h2>
+            <p>We will generate a customized diet plan based on your answers.</p>
+            <button onclick="submitForm()">Submit ✅</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

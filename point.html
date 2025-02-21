@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Rewards System</title>
+    <link rel="stylesheet" href="./point.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏋 Earn Rewards for Staying Fit! 🏆</h1>
+        <p>Complete workouts, track your progress, and earn rewards!</p>
+
+        <!-- Points Display -->
+        <div class="points-display">
+            <h2>💰 Points: <span id="points">0</span></h2>
+        </div>
+
+        <!-- Workout Completion Section -->
+        <div class="workout-section">
+            <h3>Today's Workout</h3>
+            <button onclick="completeWorkout()">✅ Complete Workout (+50 points)</button>
+        </div>
+
+
+        <!-- Progress Tracking -->
+        <div class="tracking-section">
+            <h3>📊 Track Your Progress</h3>
+            <label>Steps Walked: <input type="number" id="steps" min="0"></label>
+            <label>Calories Burned: <input type="number" id="calories" min="0"></label>
+            <button onclick="trackProgress()">Track Progress (+20 points)</button>
+        </div>
+
+        <!-- Badges & Rewards -->
+        <div class="badges-section">
+            <h3>🏅 Badges Earned</h3>
+            <div id="badges"></div>
+        </div>
+
+        <!-- Character Upgrades -->
+        <div class="character-section">
+            <h3>🎮 Upgrade Your Avatar</h3>
+            <button onclick="upgradeCharacter()">Upgrade (+100 points)</button>
+            <p id="upgrade-message"></p>
+        </div>
+    </div>
+
+    <script src="./point.html"></script>
+</body>
+</html>

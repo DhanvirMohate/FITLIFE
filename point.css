@@ -1,0 +1,79 @@
+/* Fullscreen Background */
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; /* Changed background to black */
+    color: white;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Main Container (Centered & Full Width) */
+.container {
+    background: rgba(25, 25, 25, 0.95); /* Dark grayish-black for better visibility */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+    width: 80vw; /* Covers most of the screen width */
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Points Display */
+.points-display {
+    background: yellow;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Buttons */
+button {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #ff6b81;
+    transform: scale(1.05);
+}
+
+/* Input Fields */
+input {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Headings */
+h1, h3 {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 18px;
+}
