@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Rewards System</title>
-    <link rel="stylesheet" href="./point.css">
+    <link rel="stylesheet" href="point.css">
 </head>
 <body>
     <div class="container">
@@ -22,12 +22,20 @@
             <button onclick="completeWorkout()">✅ Complete Workout (+50 points)</button>
         </div>
 
+        <!-- Fitness Goals -->
+        <div class="goal-section">
+            <h3>🎯 Set Your Fitness Goals</h3>
+            <input type="text" id="goal" placeholder="Enter your goal">
+            <button onclick="setGoal()">Set Goal</button>
+            <p id="goal-message"></p>
+        </div>
 
         <!-- Progress Tracking -->
         <div class="tracking-section">
             <h3>📊 Track Your Progress</h3>
             <label>Steps Walked: <input type="number" id="steps" min="0"></label>
-            <label>Calories Burned: <input type="number" id="calories" min="0"></label>
+            <label>Workout Time (min): <input type="number" id="workout-time" min="0"></label>
+            <label>Total Exercises Done: <input type="number" id="exercises" min="0"></label>
             <button onclick="trackProgress()">Track Progress (+20 points)</button>
         </div>
 
@@ -45,6 +53,6 @@
         </div>
     </div>
 
-    <script src="./point.html"></script>
+    <script src="point.js"></script>
 </body>
 </html>

@@ -1,68 +1,48 @@
-// Initialize Points & Badges
+// Initialize Points
 let points = 0;
-const pointsDisplay = document.getElementById("points");
-const badgesDisplay = document.getElementById("badges");
+document.getElementById("points").innerText = points;
 
-// Function: Complete Workout
+// Function to Add 50 Points for Completing Workout
 function completeWorkout() {
     points += 50;
     updatePoints();
-    checkBadges();
 }
 
-// Function: Track Progress
+// Function to Track Progress and Add 20 Points
 function trackProgress() {
-    let steps = document.getElementById("steps").value;
-    let calories = document.getElementById("calories").value;
-    
-    if (steps > 0 || calories > 0) {
+    let steps = parseInt(document.getElementById("steps").value) || 0;
+    let workoutTime = parseInt(document.getElementById("workout-time").value) || 0;
+    let exercises = parseInt(document.getElementById("exercises").value) || 0;
+
+    points += 20; // Regular tracking points
+
+    // Bonus 20 points if conditions met
+    if (steps > 2000 && workoutTime > 45 && exercises > 5) {
         points += 20;
-        updatePoints();
-        checkBadges();
-        alert("Progress Tracked! Keep Going! 🚀");
-    } else {
-        alert("Enter valid steps or calories burned!");
+        alert("🎉 Bonus +20 Points Earned for a Great Workout!");
     }
+
+    updatePoints();
 }
 
-// Function: Set Goal
+// Function to Update Points on Screen
+function updatePoints() {
+    document.getElementById("points").innerText = points;
+}
+
+// Function to Set a Fitness Goal
 function setGoal() {
-    let goalText = document.getElementById("goal").value;
-    if (goalText.trim() !== "") {
-        document.getElementById("goal-message").innerText = "🎯 Goal Set: " + goalText;
-    } else {
-        alert("Enter a fitness goal!");
-    }
+    let goal = document.getElementById("goal").value;
+    document.getElementById("goal-message").innerText = `🎯 Goal Set: ${goal}`;
 }
 
-// Function: Upgrade Character
+// Function to Upgrade Character
 function upgradeCharacter() {
     if (points >= 100) {
         points -= 100;
         updatePoints();
-        document.getElementById("upgrade-message").innerText = "🎮 Character Upgraded!";
+        document.getElementById("upgrade-message").innerText = "🎮 Avatar Upgraded!";
     } else {
-        alert("Not enough points! Earn more by working out!");
-    }
-}
-
-// Function: Update Points Display
-function updatePoints() {
-    pointsDisplay.innerText = points;
-}
-
-// Function: Check & Add Badges
-function checkBadges() {
-    if (points >= 100 && !document.querySelector(".badge-100")) {
-        let badge = document.createElement("span");
-        badge.classList.add("badge", "badge-100");
-        badge.innerText = "🏅 100 Points!";
-        badgesDisplay.appendChild(badge);
-    }
-    if (points >= 200 && !document.querySelector(".badge-200")) {
-        let badge = document.createElement("span");
-        badge.classList.add("badge", "badge-200");
-        badge.innerText = "🥇 200 Points!";
-        badgesDisplay.appendChild(badge);
+        alert("Not enough points to upgrade!");
     }
 }
