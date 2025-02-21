@@ -14,7 +14,7 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
-    background: url('fitness-banner.jpg') no-repeat center center / cover;
+    background: url('') no-repeat center center / cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
