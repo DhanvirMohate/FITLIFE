@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Badges Container */
+.badges-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Scrollable Badge Sections */
+.badge-section {
+    width: 300px;
+    height: 350px;
+    overflow-y: auto;
+    border: 2px solid #ff4757;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #222;
+}
+
+/* Individual Badge */
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+/* Badge Images */
+.badge img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* Badge Text */
+.badge p {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Scrollbar Styling */
+.badge-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.badge-section::-webkit-scrollbar-thumb {
+    background: #ff4757;
+    border-radius: 10px;
+}
+
+.badge-section::-webkit-scrollbar-track {
+    background: #222;
+}
